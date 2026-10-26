@@ -21,3 +21,11 @@ Strategy recommendations follow the provided BJA chart exactly, including condit
 Hands are training scenarios, not a casino probability simulator: the shoe resets per round, initial player/dealer blackjacks are excluded, and focus modes deliberately select situations. Dealer blackjack is checked before decisions. Results use practice units; no money or betting account exists. The chart is a memorization guide, not a universal strategy for every casino rule set. Focused practice gives equal opportunity to rare chart situations. Missed replay stores initial unsplit two-card situations; mistakes later in a hand still affect accuracy.
 
 Google Fonts is optional; system font fallbacks work offline. All gameplay and saved progress stay in the browser.
+
+## Updated modes
+
+The simpler interface has two modes. Practice strategy retains the BJA chart and grading. Play blackjack applies your chosen action immediately without grading; the chart is optional. Regular play uses a six-deck shoe reshuffled below 80 cards, includes player/dealer naturals and 3:2 blackjack payouts, and tracks net session units in memory. Each hand starts at one unit; doubles and splits increase exposure. Rules are locked during an active regular hand. Switching modes abandons the current hand. No insurance is offered. This regular mode supersedes the training-scenario exclusions described above. Practice statistics remain separate and saved locally.
+
+## Bankroll and betting
+
+Regular blackjack now starts with $1,000 in play money. Choose a whole-dollar bet before each deal; half, double, and maximum shortcuts are available. Stakes leave the available bankroll when committed. Splits and doubles reserve an additional matching stake and are disabled if you cannot afford them. Settlement returns stakes plus profit (3:2 for a natural, even money for ordinary wins, half back for surrender, full stake back on pushes). Split hands settle individually, and the banner displays the round's net result. The bankroll persists locally; refreshing during a hand forfeits its committed stakes. Switching modes and resetting the bankroll are disabled during active play. Reset bankroll restores $1,000 and clears session results. Betting does not affect strategy practice statistics.

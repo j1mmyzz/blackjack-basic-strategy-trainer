@@ -1,1 +1,10 @@
-{"name":"felt-blackjack-trainer","version":"1.0.0","private":true,"type":"module","scripts":{"test":"node --test strategy.test.js","start":"node server.js"}}
+{
+  "name": "felt-blackjack-trainer",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test --test-isolation=none strategy.test.js outcome.test.js bankroll.test.js",
+    "start": "node server.js"
+  }
+}

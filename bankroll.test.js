@@ -1,0 +1,4 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {validBet,reserve,payout} from './bankroll.js';
+test('bets must be positive whole dollars within bankroll',()=>{for(const n of [0,-1,1.5,NaN,Infinity,1001])assert.equal(validBet(n,1000),false);assert.equal(validBet(1000,1000),true)});
+test('reserve and settle win, loss, push, natural and surrender',()=>{const b=reserve(1000,20);assert.equal(b,980);for(const [profit,expected] of [[20,1020],[-20,980],[0,1000],[30,1030],[-10,990]])assert.equal(payout(b,[{bet:20}],[{units:profit}]),expected)});
+test('split and double reserve extra stakes without overdrawing',()=>{let b=reserve(100,20);b=reserve(b,20);b=reserve(b,20);assert.equal(payout(b,[{bet:40},{bet:20}],[{units:40},{units:-20}]),120);assert.throws(()=>reserve(10,20))});
